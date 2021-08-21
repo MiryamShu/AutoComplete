@@ -19,14 +19,7 @@ class ErrorsSentence:
         changes_arr = self.__swap.search(sentence, size)
         deletes_arr = self.__delete.search(sentence, size)
         add_arr = self.__add.search(sentence, size)
-        merge_arr = changes_arr
-        # for seq in deletes_arr:
-        #     if seq not in merge_arr:
-        #         merge_arr += seq
-        # for seq in add_arr:
-        #     if seq not in merge_arr:
-        #         merge_arr += seq
-        # merge_arr = sort(merge_arr)[::-1]
+
         merge_arr = sort(changes_arr + deletes_arr + add_arr)[::-1]
 
 
